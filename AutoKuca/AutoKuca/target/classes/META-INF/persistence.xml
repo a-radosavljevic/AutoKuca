@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="AutoKucaPU">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.javawebtutor.AutoKuca.Kredit</class>
+		<class>com.javawebtutor.AutoKuca.Kupac</class>
+		<class>com.javawebtutor.AutoKuca.ProdataVozila</class>
+		<class>com.javawebtutor.AutoKuca.Vozilo</class>
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:Mysql://localhost:3308/autokuca" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="root" />
+			<property name="hibernate.archive.autodetection" value="class" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
